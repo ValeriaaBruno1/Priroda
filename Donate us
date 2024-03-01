@@ -1,0 +1,447 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky section</title>
+    <style>
+        /* Stile della sezione sticky */
+        .sticky-section {
+            background-color: #4CAF50; /* Colore di sfondo */
+            color: #fff; /* Colore del testo */
+            padding: 1px 5px; /* Spaziatura interna */
+            text-align: center; /* Allineamento del testo al centro */
+            position: sticky; /* Posizione sticky */
+            top: 0; /* Posiziona all'inizio della finestra */
+            z-index: 1000; /* Indice di sovrapposizione */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra */
+        }
+    </style>
+</head>
+<body>
+    <!-- Sezione sticky -->
+    <div class="sticky-section">
+        <p>Support us and our work, save the planet</p>
+    </div>
+
+    <!-- Altri contenuti della pagina... -->
+</body>
+</html>
+
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Colore di sfondo del corpo */
+            color: #000; /* Colore del testo principale */
+        }
+        header {
+            background-color: #fff; /* Colore di sfondo dell'intestazione */
+            color: #000; /* Colore del testo dell'intestazione */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            width: 50px;
+            height: auto;
+        }
+        nav {
+            background-color: rgba(255, 255, 255, 0.8); /* Colore di sfondo del menu */
+            padding: 10px;
+            text-align: center;
+            flex: 1;
+            margin: 0;
+            border-radius: 5px;
+        }
+        nav a {
+            color: #000;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+        }
+      
+        nav a:hover {
+            background-color: #95E198; /* Colore di sfondo del menu al passaggio del mouse */
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+            margin: 20px auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            border-radius: 10px;
+            max-width: 800px; /* Larghezza massima delle sezioni */
+            position: relative;
+        }
+        section h2 {
+            color: #000; /* Colore del titolo delle sezioni */
+            font-size: 30px; /* Aumento della dimensione del titolo */
+            margin-bottom: 10px;
+        }
+        section p {
+            font-size: 15px; /* Dimensione del testo normale */
+            line-height: 1.6; /* Altezza della riga */
+            margin-bottom: 20px;
+        }
+        .action {
+            margin-top: 20px; /* Spazio superiore per il paragrafo di azione */
+        }
+        .action a {
+            color: #fff;
+            background-color: #4CAF50; /* Colore di sfondo del pulsante di azione */
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+        .action a:hover {
+            background-color: #45a049; /* Colore di sfondo del pulsante al passaggio del mouse */
+        }
+        footer {
+            background-color: #000; /* Colore di sfondo del footer */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        footer .footer-column {
+            flex: 1;
+            padding: 0 20px;
+        }
+        footer h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .legal-menu {
+            text-align: left;
+        }
+        .legal-menu nav {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .legal-menu nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .legal-menu nav a:hover {
+            background-color: #E8F5E9;
+            color: #4CAF50;
+        }
+        .social {
+            margin-top: 20px;
+        }
+        .social a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+        .social a:hover {
+            color: #4CAF50;
+        }
+        .divider {
+            margin-top: 20px;
+            border-top: 2px solid #4CAF50;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .grid-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .grid-item h3 {
+            color: #4CAF50;
+        }
+        .grid-item p {
+            margin-top: 10px;
+        }
+        .brown-box {
+            background-color: #8B4513; /* Marrone */
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        /* Aggiunta del background sfumato */
+        section#home {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('forest.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff; /* Cambio del colore del testo nella sezione */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="PriRoda Logo" class="logo">
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About us</a>
+            <a href="#contact">Contact us</a>
+            <a href="#join">Join Us</a>
+            <a href="#join">Donate</a>
+        </nav>
+    </header>
+  </section>
+    </section>
+    <section id="about">
+        <div class="divider"></div>
+        <h2>Make a Donation</h2>
+      
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <style>
+        /* Stili per il modulo */
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #006837;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #000;
+        }
+    </style>
+</head>
+  <!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation</title>
+    <style>
+        /* Stili per il pulsante di donazione */
+        .btn-donate {
+            background-color: #4caf50; /* Colore verde */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border: none;
+        }
+
+        .btn-donate:hover {
+            background-color: #45a049; /* Sfumatura verde più scura al passaggio del mouse */
+        }
+
+        /* Altri stili rimangono invariati */
+        .donation-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Altri stili rimangono invariati */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        /* Altri stili rimangono invariati */
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        /* Altri stili rimangono invariati */
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="donation-container">
+        <form action="#">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount (USD):</label>
+                <input type="number" id="amount" name="amount" min="1" placeholder="Enter donation amount">
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn-donate" value="Donate Now">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Donate</title>
+    <style>
+        /* Styles for sections */
+        .section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        /* Styles for images */
+        .section img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Styles for text */
+        .section p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Styles for icons */
+        .icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+        <h2>Helping the Environment</h2>
+        <p>By donating to our cause, you contribute to environmental conservation and the promotion of sustainability.</p>
+        <i class="icon fas fa-tree"></i>
+
+        <h2>Supporting Research</h2>
+        <p>Your donations enable us to support innovative research projects to address global environmental challenges.</p>
+        <i class="icon fas fa-flask"></i>
+    </div>
+        <h2>Creating a Better Future</h2>
+        <p>With your support, we can build a more sustainable future for generations to come and for our planet.</p>
+        <i class="icon fas fa-globe"></i>
+    </div>
+</body>
+</html>
+    </section>
+    <footer style="background-color: #000; color: #fff;">
+        <div class="footer-column">
+            <h2>Contact us</h2>
+            <p>To contact us, send us an email to info@priroda.it or call us on +39 123 456 789.</p>
+        </div>
+        <div class="footer-column legal-menu" style="background-color: #0000;">
+            <h2>Legal</h2>
+            <nav>
+                <a href="#privacy-policy">Privacy Policy</a>
+                <a href="#terms-of-service">Terms of Service</a>
+                <a href="#cookie-policy">Cookie Policy</a>
+            </nav>
+        </div>
+        <div class="footer-column social" style="background-color: #000;">
+            <h2>Follow us</h2>
+            <a href="#facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
+
+    <style>
+        /* Stile del sotto-footer */
+        .sub-footer {
+            background-color: #4CAF50;
+            padding: 1px 0;
+            text-align: center; /* Centra il testo */
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Il resto del tuo codice HTML -->
+
+    <!-- Sotto-footer -->
+    <div class="sub-footer">
+        <p>2024 All rights reserved</p>
+    </div>
+</body>
+</html>
+<style>
+    .sub-footer p {
+        color: white;
+    }
+</style>
